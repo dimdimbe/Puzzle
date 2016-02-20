@@ -1,0 +1,23 @@
+#demoApp{
+  background: #DEDEDE;
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -200px;
+}
+#meteos{
+  position: relative;
+  background: white;
+  height: 270px;
+}
+.meteo{
+  background: #ffffff;
+  display:inline-block;
+  width: 200px; height: 135px;
+}
+.meteo:nth-child(even){
+  background: #f0f0f0;
+}

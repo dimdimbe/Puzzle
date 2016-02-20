@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PuzzleJs demo app</title>
+    <script src="source/Puzzle.js" charset="utf-8"></script>
+    <script src="source/Puzzle.core.js" charset="utf-8"></script>
+    <script src="source/Puzzle.ajax.js" charset="utf-8"></script>
+    <script src="source/Puzzle.view.js" charset="utf-8"></script>
+
+    <script src="demo.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="demo.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <h1>A simple demo of a meteo app wrote with PuzzleJs</h1>
+    <p>
+      You can try to add a city in this list.
+      Open the console, and type demoApp.addCity('name of the city');
+    </p>
+    <div id="wrapper">
+      <!-- The app live here -->
+    </div>
+
+    <script type="text/javascript">
+    var demoApp = Puzzle.create('Demo',{
+      id : 'demoApp',
+      meteos : [],
+      parent : document.body.querySelector('#wrapper')
+    },['configureView','appendToParent']);
+
+    demoApp
+      .addCity('namur')
+      .addCity('new-york')
+      .addCity('san francisco');
+    </script>
+  </body>
+</html>
